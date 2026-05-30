@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         * {
             box-sizing: border-box;
@@ -24,39 +24,39 @@
 
         .kiosk-container {
             width: 100%;
-            height: 1920px;
+            height: 1536px; /* Reduced from 1920px */
             max-width: 100vw;
             max-height: 100vh;
             background-color: #ffffff;
             display: flex;
             flex-direction: column;
-            box-shadow: 0 0 40px rgba(0,0,0,0.2);
+            box-shadow: 0 0 32px rgba(0,0,0,0.2); /* Reduced from 40px */
         }
 
         .kiosk-header {
             background-color: #0066cc;
             color: white;
-            padding: 40px;
+            padding: 32px; /* Reduced from 40px */
             text-align: center;
-            font-size: 32px;
+            font-size: 25.6px; /* Reduced from 32px */
             font-weight: bold;
         }
 
         .chat-area {
             flex: 1;
-            padding: 40px;
+            padding: 32px; /* Reduced from 40px */
             overflow-y: auto;
             display: flex;
             flex-direction: column;
-            gap: 24px;
+            gap: 19.2px; /* Reduced from 24px */
             background-color: #f8fafc;
         }
 
         .message {
             max-width: 75%;
-            padding: 24px;
-            border-radius: 20px;
-            font-size: 24px;
+            padding: 19.2px; /* Reduced from 24px */
+            border-radius: 16px; /* Reduced from 20px */
+            font-size: 19.2px; /* Reduced from 24px */
             line-height: 1.4;
         }
 
@@ -64,31 +64,31 @@
             background-color: #e2e8f0;
             color: #1e293b;
             align-self: flex-start;
-            border-top-left-radius: 4px;
+            border-top-left-radius: 3.2px; /* Reduced from 4px */
         }
 
         .user-message {
             background-color: #0066cc;
             color: white;
             align-self: flex-end;
-            border-top-right-radius: 4px;
+            border-top-right-radius: 3.2px; /* Reduced from 4px */
         }
 
         .input-container {
-            padding: 30px;
+            padding: 24px; /* Reduced from 30px */
             background-color: #ffffff;
-            border-top: 2px solid #e2e8f0;
+            border-top: 1.6px solid #e2e8f0; /* Reduced from 2px */
             display: flex;
-            gap: 20px;
+            gap: 16px; /* Reduced from 20px */
         }
 
         .text-input {
             flex: 1;
-            height: 80px;
-            border: 3px solid #cbd5e1;
-            border-radius: 40px;
-            padding: 0 30px;
-            font-size: 26px;
+            height: 64px; /* Reduced from 80px */
+            border: 2.4px solid #cbd5e1; /* Reduced from 3px */
+            border-radius: 32px; /* Reduced from 40px */
+            padding: 0 24px; /* Reduced from 30px */
+            font-size: 20.8px; /* Reduced from 26px */
             outline: none;
             background-color: #f8fafc;
         }
@@ -99,13 +99,13 @@
         }
 
         .send-btn {
-            width: 140px;
-            height: 80px;
+            width: 112px; /* Reduced from 140px */
+            height: 64px; /* Reduced from 80px */
             background-color: #0066cc;
             color: white;
             border: none;
-            border-radius: 40px;
-            font-size: 24px;
+            border-radius: 32px; /* Reduced from 40px */
+            font-size: 19.2px; /* Reduced from 24px */
             font-weight: bold;
             cursor: pointer;
         }
@@ -117,48 +117,48 @@
 
         .keyboard-container {
             background-color: #d1d5db;
-            padding: 20px;
+            padding: 16px; /* Reduced from 20px */
             display: flex;
             flex-direction: column;
-            gap: 12px;
-            border-top: 2px solid #cbd5e1;
+            gap: 9.6px; /* Reduced from 12px */
+            border-top: 1.6px solid #cbd5e1; /* Reduced from 2px */
         }
 
         .keyboard-row {
             display: flex;
             justify-content: center;
-            gap: 10px;
+            gap: 8px; /* Reduced from 10px */
             width: 100%;
         }
 
         .key {
             flex: 1;
-            height: 90px;
-            max-width: 90px;
+            height: 72px; /* Reduced from 90px */
+            max-width: 72px; /* Reduced from 90px */
             background-color: #ffffff;
             border: none;
-            border-radius: 12px;
-            font-size: 28px;
+            border-radius: 9.6px; /* Reduced from 12px */
+            font-size: 22.4px; /* Reduced from 28px */
             font-weight: bold;
             color: #1f2937;
             display: flex;
             justify-content: center;
             align-items: center;
-            box-shadow: 0 4px 0 #9ca3af;
+            box-shadow: 0 3.2px 0 #9ca3af; /* Reduced from 4px */
             cursor: pointer;
         }
 
         .key:active {
             background-color: #e5e7eb;
-            transform: translateY(4px);
+            transform: translateY(3.2px); /* Reduced from 4px */
             box-shadow: none;
         }
 
         .key.wide {
-            max-width: 150px;
+            max-width: 120px; /* Reduced from 150px */
             background-color: #9ca3af;
             color: white;
-            box-shadow: 0 4px 0 #6b7280;
+            box-shadow: 0 3.2px 0 #6b7280; /* Reduced from 4px */
         }
 
         .key.wide:active {
@@ -166,7 +166,7 @@
         }
 
         .key.spacebar {
-            max-width: 600px;
+            max-width: 480px; /* Reduced from 600px */
         }
     </style>
 </head>
